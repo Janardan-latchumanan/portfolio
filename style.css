@@ -126,6 +126,8 @@ header .btn:hover {
 
 .contact-section {
     background-color: #444;
+    margin-top: 100px;  /* Adjust if needed */
+    clear: both;
 }
 
 h2 {
@@ -418,7 +420,4 @@ html {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
 }
-.contact {
-    margin-top: 100px;  /* Adjust if needed */
-    clear: both;
-}
+
