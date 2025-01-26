@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    transition: all 0.5s ease-out;
 }
 
 body {
@@ -13,7 +14,7 @@ body {
 
 /* Header */
 header {
-    height: 100vh;
+    height: 100vh;  /* Full viewport height */
     background: linear-gradient(135deg, #232323, #4b4b7e);
     color: white;
     display: flex;
@@ -24,18 +25,19 @@ header {
     padding: 0 20px;
 }
 
+/* Center content within header */
 header .header-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 10vh;
+    margin-top: 10vh; /* Added space from the top */
 }
 
 header h1 {
     font-size: 3rem;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Space between title and button */
 }
 
 header h1 .highlight {
@@ -48,7 +50,7 @@ header .subtitle {
 }
 
 header .btn {
-    margin-top: 30px;
+    margin-top: 30px; /* Increased space between text and button */
     padding: 12px 30px;
     background-color: #00b3ff;
     color: #fff;
@@ -71,9 +73,8 @@ header .btn:hover {
     background: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 15px 0;
-    text-align: center;
-    transition: top 0.3s;
     z-index: 1000;
+    text-align: center;
 }
 
 .navbar ul {
@@ -104,6 +105,7 @@ header .btn:hover {
 
 /* Section */
 .section {
+    height: 100vh;  /* Full viewport height */
     padding: 80px 20px;
     background: #232323;
     text-align: center;
@@ -111,6 +113,19 @@ header .btn:hover {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     margin-top: 40px;
+}
+
+/* Styling for specific sections */
+.about {
+    background-color: #2a2a2a;
+}
+
+.projects {
+    background-color: #333;
+}
+
+.contact-section {
+    background-color: #444;
 }
 
 h2 {
@@ -127,7 +142,7 @@ h2 {
 
 /* Contact Form */
 .contact-form {
-    margin-top: 60px;
+    margin-top: 40px;
     background-color: #2c2c2c;
     padding: 30px;
     border-radius: 10px;
@@ -175,8 +190,8 @@ footer {
     color: white;
     padding: 40px 20px;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: flex-start; /* Aligns the social icons to the extreme left */
+    align-items: center; /* Vertically center the icons */
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -184,18 +199,18 @@ footer {
 
 footer .social-links {
     display: flex;
-    margin: 0;
+    margin: 0; /* Removes any default margin */
 }
 
 footer .social-icon {
-    margin-right: 20px;
+    margin-right: 20px; /* Space between the icons */
     display: inline-block;
     transition: transform 0.3s ease;
 }
 
 footer .social-icon i {
     font-size: 30px;
-    color: #00b3ff;
+    color: #00b3ff; /* Blue color for icons */
     transition: color 0.3s ease;
 }
 
@@ -204,7 +219,7 @@ footer .social-icon:hover {
 }
 
 footer .social-icon:hover i {
-    color: #ffffff;
+    color: #ffffff; /* Change icon color to white on hover */
 }
 
 /* Animations */
@@ -233,21 +248,6 @@ header, .navbar, .section {
     transition: all 0.5s ease;
 }
 
-/* Adjust section spacing */
-section:not(:first-child) {
-    margin-top: 60px;
-}
-
-section {
-    padding: 80px 20px;
-    background: #232323;
-    text-align: center;
-    color: #fff;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    margin-top: 60px;
-}
-
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     header h1 {
@@ -272,4 +272,152 @@ section {
 
 html {
     scroll-behavior: smooth;
+}
+/* Projects Section */
+#projects {
+    padding: 80px 20px;
+    background: #232323;
+    color: #fff;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #00b3ff;
+}
+
+/* Projects Section */
+#projects {
+    padding: 80px 20px;
+    background: #232323;
+    color: #fff;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #00b3ff;
+}
+
+/* Projects Section */
+#projects {
+    padding: 80px 20px;
+    background: #232323;
+    color: #fff;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #00b3ff;
+    font-weight: bold;
+}
+
+/* Project Box (Horizontal Scroll with Hidden Scrollbar) */
+.project-box {
+    display: flex;
+    overflow-x: hidden; /* Hidden scroll bar */
+    padding: 0 20px;
+    justify-content: start;
+    gap: 30px;
+    scroll-snap-type: x mandatory;
+    transition: all 0.5s ease;
+}
+
+.project-box::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+/* Project Card */
+.project-card {
+    width: 280px;
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    flex-shrink: 0;
+    scroll-snap-align: center; /* Ensures smooth snap scrolling */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    object-fit: cover; /* Ensures proper image scaling */
+}
+
+.project-content {
+    padding: 10px 0;
+}
+
+.project-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #00b3ff;
+    font-weight: bold;
+}
+
+.project-content p {
+    font-size: 1rem;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.project-content .btn {
+    padding: 10px 25px;
+    background-color: #00b3ff;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.project-content .btn:hover {
+    background-color: #0088cc;
+}
+
+/* Flexbox Container for Projects */
+.project-box {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-start;
+    padding: 20px 0;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .project-box {
+        gap: 20px;
+    }
+
+    .project-card {
+        width: 220px;
+    }
+
+    #projects h2 {
+        font-size: 2rem;
+    }
+}
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+.projects, .contact {
+    margin-top: 100px; /* Ensure space between sections */
 }
