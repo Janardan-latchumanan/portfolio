@@ -418,6 +418,7 @@ html {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
 }
-.projects, .contact {
-    margin-top: 100px; /* Ensure space between sections */
+.contact {
+    margin-top: 100px;  /* Adjust if needed */
+    clear: both;
 }
