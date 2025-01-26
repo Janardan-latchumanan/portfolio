@@ -71,9 +71,9 @@ header .btn:hover {
     background: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 15px 0;
-    z-index: 1000;
     text-align: center;
     transition: top 0.3s;
+    z-index: 1000;
 }
 
 .navbar ul {
@@ -127,7 +127,7 @@ h2 {
 
 /* Contact Form */
 .contact-form {
-    margin-top: 40px;
+    margin-top: 60px;
     background-color: #2c2c2c;
     padding: 30px;
     border-radius: 10px;
@@ -233,6 +233,21 @@ header, .navbar, .section {
     transition: all 0.5s ease;
 }
 
+/* Adjust section spacing */
+section:not(:first-child) {
+    margin-top: 60px;
+}
+
+section {
+    padding: 80px 20px;
+    background: #232323;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin-top: 60px;
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     header h1 {
@@ -257,9 +272,4 @@ header, .navbar, .section {
 
 html {
     scroll-behavior: smooth;
-}
-
-.contact {
-    margin-top: 100px;
-    clear: both;
 }
