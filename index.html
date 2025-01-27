@@ -8,9 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    
-    <!-- Font Awesome CDN for social media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
 </head>
 <body>
     <!-- Navbar -->
@@ -26,11 +26,16 @@
     <!-- Header Section (Home) -->
     <header id="home">
         <div class="header-content fade-in">
+            <!-- Profile Image -->
+            <div class="profile-pic">
+                <img src="profile.jpg" alt="Janardan's Profile Picture">
+            </div>
             <h1>Hi, I am <span class="highlight">Janardan</span></h1>
             <p class="subtitle">A passionate tech enthusiast with a drive to innovate</p>
             <a href="#about" class="btn">Learn More</a>
         </div>
     </header>
+
 
     <!-- About Section -->
     <section class="section about" id="about">
@@ -40,37 +45,31 @@
         </div>
     </section>
 
-<!-- Projects Section -->
-<section id="projects" class="section">
-    <div class="container">
-        <h2>My Projects</h2>
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>My Projects</h2>
 
-        <!-- Project Box (Horizontal Scroll) -->
-        <div class="project-box">
-            <!-- Project Card 1 -->
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="lib_manage.jpg" alt="Library Management Project">
+            <!-- Project Box (Horizontal Scroll) -->
+            <div class="project-box">
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="lib_manage.jpg" alt="Library Management Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Library Management System</h3>
+                        <p>
+                            A comprehensive solution for managing books, users, and transactions in a library. This system simplifies book issuing, returns, and availability tracking. It’s user-friendly, scalable, and easily updatable, ensuring efficient library operations.
+                        </p>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
                 </div>
-                <div class="project-content">
-                    <h3>Library Management System</h3>
-                    <p>
-                        A comprehensive solution for managing books, users, and transactions in a library. This system simplifies book issuing, returns, and availability tracking. It’s user-friendly, scalable, and easily updatable, ensuring efficient library operations.
-                    </p>
-                    <a href="#" class="btn">View Project</a>
-                </div>
+
+                <!-- Additional Project Cards (Follow the same structure) -->
             </div>
-
-            <!-- Additional Project Cards (Follow the same structure) -->
-
         </div>
-    </div>
-</section>
-
-
-
-
-
+    </section>
 
     <!-- Contact Section -->
     <section class="section contact-section" id="contact">
@@ -104,7 +103,176 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Font Awesome for social icons -->
+
+        <!-- Back to Top Button -->
+        <button id="back-to-top" aria-label="Back to Top">
+            <i class="fas fa-circle-arrow-up"></i>
+        </button>
+    <script>
+        // Back to Top Button functionality
+        const backToTopButton = document.getElementById("back-to-top");
+    
+        // When the button is clicked, scroll to the top smoothly
+        backToTopButton.addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    
+        // Show or hide the button based on scroll position
+        window.addEventListener("scroll", function() {
+            if (window.scrollY > 200) {
+                backToTopButton.style.display = "block"; // Show button
+            } else {
+                backToTopButton.style.display = "none"; // Hide button
+            }
+        });
+    </script>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Janardan's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section (Home) -->
+    <header id="home">
+        <div class="header-content fade-in">
+            <!-- Profile Image -->
+            <div class="profile-pic">
+                <img src="profile.jpg" alt="Janardan's Profile Picture">
+            </div>
+            <h1>Hi, I am <span class="highlight">Janardan</span></h1>
+            <p class="subtitle">A passionate tech enthusiast with a drive to innovate</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </header>
+
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <h2>About Me</h2>
+        <div class="container">
+            <p>I'm Janardan, a future tech leader with a passion for innovative solutions and technology-driven industries. I'm currently exploring opportunities in the tech world and looking to apply my skills to the most cutting-edge challenges.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>My Projects</h2>
+
+            <!-- Project Box (Horizontal Scroll) -->
+            <div class="project-box">
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="lib_manage.jpg" alt="Library Management Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Library Management System</h3>
+                        <p>
+                            A comprehensive solution for managing books, users, and transactions in a library. This system simplifies book issuing, returns, and availability tracking. It’s user-friendly, scalable, and easily updatable, ensuring efficient library operations.
+                        </p>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Additional Project Cards (Follow the same structure) -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="social-links">
+            <div class="social-icon">
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+            <div class="social-icon">
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="social-icon">
+                <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="social-icon">
+                <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <div class="social-icon">
+                <a href="https://wa.me/yourphonenumber" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+        <!-- Back to Top Button -->
+        <button id="back-to-top" aria-label="Back to Top">
+            <i class="fas fa-circle-arrow-up"></i>
+        </button>
+    <script>
+        // Back to Top Button functionality
+        const backToTopButton = document.getElementById("back-to-top");
+    
+        // When the button is clicked, scroll to the top smoothly
+        backToTopButton.addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    
+        // Show or hide the button based on scroll position
+        window.addEventListener("scroll", function() {
+            if (window.scrollY > 200) {
+                backToTopButton.style.display = "block"; // Show button
+            } else {
+                backToTopButton.style.display = "none"; // Hide button
+            }
+        });
+    </script>
+
+
+
+
+
+    <script src="script.js"></script>
 </body>
 </html>
