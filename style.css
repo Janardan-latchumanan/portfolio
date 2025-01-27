@@ -426,3 +426,73 @@ html {
     margin-top: 100px;  /* Adjust if needed */
     clear: both;
 }
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #333; /* Background of the scrollbar track */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00b3ff; /* Color of the scroll thumb */
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+/* Hover effect for the scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+    background: #0088cc; /* Change color on hover */
+}
+/* Button Style */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #00b3ff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+#back-to-top:hover {
+    background-color: #0088cc;
+    transform: scale(1.1);
+}
+
+#back-to-top i {
+    pointer-events: none; /* Ensure icon is non-interactive */
+}
+/* Profile Picture Styling */
+.profile-pic {
+    width: 300px;  /* Adjusted size */
+    height: 300px;  /* Adjusted size */
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 30px; /* Increased space between profile pic and text */
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the circle */
+}
+
+
+/* Update Header Styling to Center the Content */
+header .header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10vh;
+}
