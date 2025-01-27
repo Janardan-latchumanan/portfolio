@@ -499,7 +499,7 @@ header .header-content {
 /* Fix Navbar overlap issue on mobile */
 @media (max-width: 768px) {
     .navbar {
-        position: fixed;
+        position: absolute;
         top: 0;
         width: 100%;
         z-index: 1000;
