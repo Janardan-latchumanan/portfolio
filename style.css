@@ -496,3 +496,45 @@ header .header-content {
     text-align: center;
     margin-top: 10vh;
 }
+/* Fix Navbar overlap issue on mobile */
+@media (max-width: 768px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+    header {
+        padding-top: 80px; /* Add top padding to ensure content below navbar is visible */
+    }
+    header .header-content {
+        margin-top: 20vh; /* Adjust for better spacing on smaller screens */
+    }
+    .profile-pic {
+        margin-bottom: 20px; /* Adjust spacing between profile and text */
+    }
+}
+
+/* Fix Projects section overlap with Contact section */
+@media (max-width: 768px) {
+    .projects {
+        margin-bottom: 60px; /* Add margin at the bottom to avoid overlap */
+    }
+    .contact-section {
+        margin-top: 40px; /* Add space above the contact section */
+    }
+}
+
+/* Projects Section - Adjustments for mobile view */
+@media (max-width: 768px) {
+    .project-box {
+        gap: 20px;
+        padding: 20px 0;
+    }
+    .project-card {
+        width: 220px; /* Adjust project card width for smaller screens */
+    }
+    #projects h2 {
+        font-size: 2rem; /* Adjust title size */
+    }
+}
